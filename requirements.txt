@@ -3,3 +3,4 @@ pandas
 numpy
 qrcode
 pillow
+openpyxl == 3.0.10
