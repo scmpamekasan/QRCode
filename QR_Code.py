@@ -20,7 +20,7 @@ with st.form(key='myqr_form'):
 	raw_text = st.text_area("Input Kode Outlet disini (Kode Huruf Menggunakan Huruf Kapital)", max_chars=8)
 	submit_button = st.form_submit_button("Generate")
 	df = pd.read_excel(
-    		io ="/Users/ekasulawestara/Belajar Pyhton2/List_QR.xlsx",
+    		io ="List_QR.xlsx",
     		engine="openpyxl",
     		sheet_name="Customer",
     		usecols="B:H",
