@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+os
+time
+qrcode
+pillow
