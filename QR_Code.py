@@ -24,7 +24,7 @@ with st.form(key='myqr_form'):
     		engine="openpyxl",
     		sheet_name="Customer",
     		usecols="B:H",
-    		nrows=10000,
+    		nrows=20000,
     		) 
 
 	#df1 = df.drop(['Nama_Outlet','Alamat','Zona','Sektor','Tgl Process'], axis=1)
