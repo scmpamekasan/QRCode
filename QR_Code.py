@@ -33,8 +33,8 @@ with st.form(key='myqr_form'):
 
 	df2 = df1[df1["OutletID"].str.contains(raw_text)]
 	#df4 = df2.iloc[0][1]
-	df3 = df2.iloc[0][2]
-	df4 = df2.iloc[0][1]
+	df3 = df2.iloc[0].iloc[2]  # Instead of df2.iloc[0][2]
+        df4 = df2.iloc[0].iloc[1]  # Instead of df2.iloc[0][1]
 
 	
 	#st.write(df3)
