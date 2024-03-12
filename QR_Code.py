@@ -1,3 +1,28 @@
+import streamlit as st
+import pandas as pd
+from PIL import Image
+import numpy as np
+import os
+import time
+import qrcode
+
+timestr = time.strftime("%Y%m%d-%H%M%S")
+qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L, 
+                   box_size=10, border=14)
+
+def load_image(img):
+    im = Image.open(img)
+    return im
+
+@st.cache
+def load_data():
+    return pd.read_excel(
+        io="List_QR.xlsx",
+        engine="openpyxl",
+        sheet_name="Customer",
+        nrows=20000
+    )
+
 st.subheader("Create QR Code")
 with st.form(key='myqr_form'):
 	raw_text = st.text_area("Input Kode Outlet disini (Kode Huruf Menggunakan Huruf Kapital)", max_chars=8)
