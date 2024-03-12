@@ -20,8 +20,9 @@ def load_data():
         io="List_QR.xlsx",
         engine="openpyxl",
         sheet_name="Customer",
-        usecols=["OutletID", "YourColumnName"],  # Adjust column names as needed
         nrows=20000,
+    )
+
     )
 
 st.subheader("Create QR Code")
