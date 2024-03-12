@@ -20,10 +20,9 @@ def load_data():
         io="List_QR.xlsx",
         engine="openpyxl",
         sheet_name="Customer",
-        nrows=20000,
+        nrows=20000
     )
 
-    )
 
 st.subheader("Create QR Code")
 with st.form(key='myqr_form'):
